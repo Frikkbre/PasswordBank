@@ -1,3 +1,6 @@
+/**
+ * This class creates password.
+ */
 public class Password {
   private String username;
   private String password;
@@ -23,6 +26,9 @@ public class Password {
   }
 
   public void setUsername(String username) {
+    if (username == null || username.isEmpty()) {
+      throw new IllegalArgumentException("Username cannot be empty");
+    }
     this.username = username;
   }
 
@@ -31,6 +37,9 @@ public class Password {
   }
 
   public void setPassword(String password) {
+    if (password == null || password.isEmpty()){
+      throw new IllegalArgumentException("Password cannot be empty");
+    }
     this.password = password;
   }
 
@@ -39,11 +48,17 @@ public class Password {
   }
 
   public void setConfirmPassword(String confirmPassword) {
+    if (confirmPassword == null || confirmPassword.isEmpty()) {
+      throw new IllegalArgumentException("Confirmation password cannot be empty");
+    }
     this.confirmPassword = confirmPassword;
   }
 
   public void setPasswordMatch(boolean passwordMatch) {
-    isPasswordMatch = passwordMatch;
+    if (password.equals(confirmPassword) && !password.isEmpty()){
+      throw new IllegalArgumentException("The password and confirmation password dont match");
+    }
+    this.isPasswordMatch = true;
   }
 
   public String getPlatform() {
@@ -51,6 +66,9 @@ public class Password {
   }
 
   public void setPlatform(String platform) {
+    if (platform == null || platform.isEmpty()){
+      throw new IllegalArgumentException("Platform cannot be empty");
+    }
     this.platform = platform;
   }
 }
