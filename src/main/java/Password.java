@@ -54,7 +54,7 @@ public class Password {
     this.confirmPassword = confirmPassword;
   }
 
-  public void setPasswordMatch(boolean passwordMatch) {
+  public void setPasswordMatch(String password, String confirmPassword) {
     if (password.equals(confirmPassword) && !password.isEmpty()){
       throw new IllegalArgumentException("The password and confirmation password dont match");
     }
