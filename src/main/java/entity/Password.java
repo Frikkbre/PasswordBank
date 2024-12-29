@@ -1,3 +1,5 @@
+package entity;
+
 /**
  * This class creates password.
  */
@@ -38,7 +40,7 @@ public class Password {
 
   public void setPassword(String password) {
     if (password == null || password.isEmpty()){
-      throw new IllegalArgumentException("Password cannot be empty");
+      throw new IllegalArgumentException("entity.Password cannot be empty");
     }
     this.password = password;
   }
