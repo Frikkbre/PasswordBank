@@ -1,4 +1,6 @@
 import org.junit.Test;
+import entity.Password;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -36,7 +38,7 @@ public class PasswordTest {
   /*@Test
   public void testSetPasswordMatch() {
 
-    Password password = new Password("username", "password", "password", "platform");
+    entity.Password password = new entity.Password("username", "password", "password", "platform");
     password.setPasswordMatch("password", "password");
     assertTrue(password.isPasswordMatch("password", "password"));
   }*/
