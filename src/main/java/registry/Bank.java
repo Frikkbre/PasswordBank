@@ -15,16 +15,21 @@ import util.PrintHandler;
  */
 public class Bank {
   private HashMap<String, Password> passwords;
+  private InputHandler inputHandler;
+  private PrintHandler printHandler;
+
 
   public Bank() {
     passwords = new HashMap<String, Password>();
+    inputHandler = new InputHandler();
+    printHandler = new PrintHandler();
   }
 
   public void addPassword() {
-    String userName = InputHandler.inputSting(); //TODO - refactor inputHandler to UI class
-    String password = InputHandler.inputString();
-    String confirmPassword = InputHandler.inputString();
-    String platform = InputHandler.inputString();
+    String userName = inputHandler.inputSting(); //TODO - refactor inputHandler to UI class
+    String password = inputHandler.inputString();
+    String confirmPassword = inputHandler.inputString();
+    String platform = inputHandler.inputString();
 
     Password newPassword = new Password(userName, password, confirmPassword, platform);
     passwords.put(newPassword.getPlatform(), newPassword);
@@ -32,11 +37,11 @@ public class Bank {
   }
 
   public void removePassword() {
-    String platform = InputHandler.inputString(); //TODO - refactor inputHandler to UI class
+    String platform = inputHandler.inputString(); //TODO - refactor inputHandler to UI class
     if (passwords.containsKey(platform)) {
       passwords.remove(platform);
     } else{
-      PrintHandler.printString("There is no password for this platform");
+      printHandler.printString("There is no password for this platform");
   }
   }
 
