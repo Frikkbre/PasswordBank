@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class InputHandler {
   Scanner inputScanner = new Scanner(System.in);
 
+  public static String inputSting() {
+  }
+
   public String inputString() {
     return inputScanner.nextLine();
 }
