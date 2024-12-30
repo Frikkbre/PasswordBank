@@ -21,7 +21,7 @@ public class Bank {
   }
 
   public void addPassword() {
-    String userName = InputHandler.inputSting();
+    String userName = InputHandler.inputSting(); //TODO - refactor inputHandler to UI class
     String password = InputHandler.inputString();
     String confirmPassword = InputHandler.inputString();
     String platform = InputHandler.inputString();
@@ -32,7 +32,7 @@ public class Bank {
   }
 
   public void removePassword() {
-    String platform = InputHandler.inputString();
+    String platform = InputHandler.inputString(); //TODO - refactor inputHandler to UI class
     if (passwords.containsKey(platform)) {
       passwords.remove(platform);
     } else{
