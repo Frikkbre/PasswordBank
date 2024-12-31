@@ -26,7 +26,7 @@ public class Bank {
   }
 
   public void addPassword() {
-    String userName = inputHandler.inputSting(); //TODO - refactor inputHandler to UI class
+    String userName = inputHandler.inputString(); //TODO - refactor inputHandler to UI class
     String password = inputHandler.inputString();
     String confirmPassword = inputHandler.inputString();
     String platform = inputHandler.inputString();
