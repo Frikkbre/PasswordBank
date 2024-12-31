@@ -6,6 +6,7 @@ public class InputHandler {
   Scanner inputScanner = new Scanner(System.in);
 
   public static String inputSting() {
+    return null;
   }
 
   public String inputString() {
